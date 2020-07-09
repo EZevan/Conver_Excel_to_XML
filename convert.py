@@ -146,8 +146,10 @@ class Convert():
 if __name__ == "__main__":
     # res = os.system('pip install -r .\\dependency\\requirements.txt')   
     # print res
-    fileName = raw_input('Enter excel name:').strip()
-    sheetName = raw_input('Enter sheet name:').strip()
+    # fileName = raw_input('Enter excel name:').strip()
+    $ sheetName = raw_input('Enter sheet name:').strip()
+    fileName = sys.argv[1].strip()
+    sheetName = sys.argv[2].strip()
     sheetList = sheetName.split(" ")
     for sheetName in sheetList:
         test = Convert(fileName, sheetName)
